@@ -46,7 +46,6 @@ For others, you can install them by `pip install -r requirements.txt`.
 
 ## Data Preparation
 Please refer to [STCN](https://github.com/hkchengrex/STCN) to prepare the datasets and put all datasets in `/data`.
-Note that in our project we only use the static datasets, DAVIS, and YouTubeVOS. (**BL30K is not used**)
 
 ## Code Structure
 ```xml
