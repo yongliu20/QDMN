@@ -20,7 +20,7 @@ Previous memory-based methods mainly focus on better matching between the curren
 | Dataset | Split |  J&F | J | F |
 | --- | :---: | :--:|:--:|:---:|
 | DAVIS 2016 | val | 92.0 | 90.7 | 93.2 |
-| DAVIS 2017 | val | 85.7 | 82.7 | 88.6 |
+| DAVIS 2017 | val | 85.6 | 82.5 | 88.6 |
 | DAVIS 2017 | test-dev | 81.9 | 78.1 | 85.4 |
 
 | Dataset | Split | Overall Score | J-Seen | F-Seen | J-Unseen | F-Unseen
