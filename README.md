@@ -45,7 +45,7 @@ For installing Pytorch and torchvision, please refer to the official [guideline]
 For others, you can install them by `pip install -r requirements.txt`.
 
 ## Data Preparation
-Please refer to [STCN](https://github.com/hkchengrex/STCN) to prepare the datasets and put all datasets in `/data`.
+Please refer to [MiVOS](https://github.com/hkchengrex/Mask-Propagation) to prepare the datasets and put all datasets in `/data`.
 
 ## Code Structure
 ```xml
