@@ -105,11 +105,11 @@ class InferenceCore:
                 # Memorize this frame
                 prev_key, prev_value, scores = self.prop_net.memorize(self.images[:,ti].cuda(), out_mask[1:])
                 scores = scores.cpu().numpy()
-                scores = list(filter(lambda a: a != 0, scores))
+                # scores = list(filter(lambda a: a != 0, scores))
                 score = np.sum(scores)
                 score = score / len(scores)
                 score = score / score_fir   
-                if (abs(ti-last_ti) >= self.mem_freq) and (score > 0.9):
+                if (abs(ti-last_ti) >= self.mem_freq) and (score > 0.8):
                     index += 1
                     if len(memory) > self.memory_thr:
                         sr = {}
