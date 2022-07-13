@@ -82,6 +82,7 @@ class InferenceCore:
         this_range = range(idx+1, closest_ti)
         end = closest_ti - 1
         
+        scores_fir = scores_fir.cpu().numpy()
         scores_fir = list(filter(lambda a: a != 0, scores_fir))
         score_fir = np.sum(scores_fir)
         score_fir = score_fir / len(scores_fir)
