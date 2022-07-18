@@ -82,16 +82,16 @@ For example, if we use 2 GPU for training and use 's0-QDMN' as ckpt name, the co
 ### For main training:
 To train on DAVIS and YouTube, use this command:
 
-`CUDA_VISIBLE_DEVICES=[GPU_ids] OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port [cccc] --nproc_per_node=GPU_num train.py --id [save_name] --stage 3 --load_network path_to_pretrained_ckpt`
+`CUDA_VISIBLE_DEVICES=[GPU_ids] OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port [cccc] --nproc_per_node=GPU_num train.py --id [save_name] --stage 2 --load_network path_to_pretrained_ckpt`
 
 Samely, if using 2 GPU, the command is:
 
-`CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 12345 --nproc_per_node=2 train.py --id s03-QDMN --stage 3 --load_network saves/s0-QDMN/**.pth`
+`CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 12345 --nproc_per_node=2 train.py --id s03-QDMN --stage 2 --load_network saves/s0-QDMN/**.pth`
 
 ### Resume training
 Besides, if you want to resume interrupted training, you can run the command with `--load_model` and using the `*_checkpoint.pth`, for example:
 
-`CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 12345 --nproc_per_node=8 train.py --id s03-QDMN --stage 0 --load_model saves/s0-QDMN/s0-QDMN_checkpoint.pth`
+`CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 12345 --nproc_per_node=8 train.py --id s0-QDMN --stage 0 --load_model saves/s0-QDMN/s0-QDMN_checkpoint.pth`
 
 ## Inference
 Run the following file to perform inference on the corresponding dataset.
