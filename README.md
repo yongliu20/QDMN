@@ -91,7 +91,7 @@ Samely, if using 2 GPU, the command is:
 ### Resume training
 Besides, if you want to resume interrupted training, you can run the command with `--load_model` and using the `*_checkpoint.pth`, for example:
 
-`CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 12345 --nproc_per_node=8 train.py --id s0-QDMN --stage 0 --load_model saves/s0-QDMN/s0-QDMN_checkpoint.pth`
+`CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 12345 --nproc_per_node=2 train.py --id s0-QDMN --stage 0 --load_model saves/s0-QDMN/s0-QDMN_checkpoint.pth`
 
 ## Inference
 Run the following file to perform inference on the corresponding dataset.
