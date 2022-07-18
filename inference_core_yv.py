@@ -174,17 +174,17 @@ class InferenceCore:
                         for m in memory:
                             score_c = np.exp(-abs(index-m))
                             sr[m] = score_c + sa[m]
-                            result_min = min(sr, key=lambda x: sr[x])
-                            pos = memory.index(result_min)
-                            memory.remove(result_min)
-                            del sa[result_min]
-                            memory.append(index)
-                            sa[index] = score
-                            for i, oi in enumerate(self.enabled_obj):
-                                self.keys[oi] = torch.cat([self.keys[oi][:, :, :pos], self.keys[oi][:, :, pos+1:]], dim=2)
-                                self.keys[oi] = torch.cat([self.keys[oi], prev_key[i:i+1]], 2)
-                                self.values[oi] = torch.cat([self.values[oi][:, :, :pos], self.values[oi][:, :, pos+1:]], dim=2)
-                                self.values[oi] = torch.cat([self.values[oi], prev_value[i:i+1]], 2)
+                        result_min = min(sr, key=lambda x: sr[x])
+                        pos = memory.index(result_min)
+                        memory.remove(result_min)
+                        del sa[result_min]
+                        memory.append(index)
+                        sa[index] = score
+                        for i, oi in enumerate(self.enabled_obj):
+                            self.keys[oi] = torch.cat([self.keys[oi][:, :, :pos], self.keys[oi][:, :, pos+1:]], dim=2)
+                            self.keys[oi] = torch.cat([self.keys[oi], prev_key[i:i+1]], 2)
+                            self.values[oi] = torch.cat([self.values[oi][:, :, :pos], self.values[oi][:, :, pos+1:]], dim=2)
+                            self.values[oi] = torch.cat([self.values[oi], prev_value[i:i+1]], 2)
                     else:
                         memory.append(index)
                         sa[index] = score
