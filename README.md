@@ -1,6 +1,6 @@
 # Learning Quality-aware Dynamic Memory for Video Object Segmentation
 
-*ECCV 2022*
+*ECCV 2022*  | [Paper](https://arxiv.org/pdf/2207.07922.pdf)
 
 ## Abstract
 Previous memory-based methods mainly focus on better matching between the current frame and the memory frames without explicitly paying attention to the quality of the memory. Therefore, frames with poor segmentation masks are prone to be memorized, which leads to a segmentation mask error accumulation problem and further affect the segmentation performance. In addition, the linear increase of memory frames with the growth of frame number also limits the ability of the models to handle long videos. To this end, we propose a Quality-aware Dynamic Memory Network (QDMN) to evaluate the segmentation quality of each frame, allowing the memory bank to selectively store accurately segmented frames to prevent the error accumulation problem. Then, we combine the segmentation quality with temporal consistency to dynamically update the memory bank to make the model have ability to hande videos of arbitray length.
@@ -107,8 +107,16 @@ For YouTube2019 val set, please submit your results to [YouTube19](https://compe
 For YouTube2018 val set, please submit to [YouTube18](https://competitions.codalab.org/competitions/19544)
 
 
-<!-- ## Citation
-If you find this work useful for your research, please cite: -->
+## Citation
+If you find this work useful for your research, please cite:
+```
+@article{2207.07922,
+      author = {Yong Liu, Ran Yu, Fei Yin, Xinyuan Zhao, Wei Zhao, Weihao Xia, Yujiu Yang},
+      title = {Learning Quality-aware Dynamic Memory for Video Object Segmentation}, 
+      journal = {arxiv:2207.07922},  
+      year = {2022}
+}
+```
 
 
 ## Acknowledgement
