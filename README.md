@@ -110,17 +110,12 @@ For YouTube2018 val set, please submit to [YouTube18](https://competitions.codal
 ## Citation
 If you find this work useful for your research, please cite:
 ```
-@article{QDMN,
-  author    = {Yong Liu and
-               Ran Yu and
-               Fei Yin and
-               Xinyuan Zhao and
-               Wei Zhao and
-               Weihao Xia and
-               Yujiu Yang},
-  title     = {Learning Quality-aware Dynamic Memory for Video Object Segmentation},
-  journal   = {arXiv preprint arXiv:2207.07922},
-  year      = {2022}
+@inproceedings{liu2022learning,
+  title={Learning quality-aware dynamic memory for video object segmentation},
+  author={Liu, Yong and Yu, Ran and Yin, Fei and Zhao, Xinyuan and Zhao, Wei and Xia, Weihao and Yang, Yujiu},
+  booktitle={ECCV},
+  pages={468--486},
+  year={2022}
 }
 ```
 
