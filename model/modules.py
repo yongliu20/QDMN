@@ -171,7 +171,7 @@ class Score(nn.Module):
         x = F.relu(self.conv3(x))
         x = F.relu(self.conv4(x))
         x = x.view(x.size(0), -1)
-        x = torch.sigmoid(self.fc1(x))
+        x = F.relu(self.fc1(x))
         x = torch.sigmoid(self.fc2(x))
 
         # x = self.gav(x)               #the method of gav
