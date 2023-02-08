@@ -28,8 +28,8 @@ Previous memory-based methods mainly focus on better matching between the curren
 | YouTubeVOS 18 | validation | 83.8 | 82.7 | 87.5 | 78.4 | 86.4 |
 <!-- | YouTubeVOS 19 | validation | 84.2 | 82.6 | 87.0 | 79.4 | 87.7 | -->
 
-<!-- ## Pretrained Model -->
-<!-- Please download the pretrained s012 model [here](https://drive.google.com/file/d/1fdiGFGol1ecVowPe6gfRHsRs9zCThFXB/view?usp=sharing). -->
+## Pretrained Model
+Please download the pretrained s012 model [here](https://drive.google.com/file/d/1fdiGFGol1ecVowPe6gfRHsRs9zCThFXB/view?usp=sharing).
 
 ## Requirements
 <!-- Similar to the baseline method [STCN](https://github.com/hkchengrex/STCN),  -->
