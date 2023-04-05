@@ -69,6 +69,8 @@ Please refer to [MiVOS](https://github.com/hkchengrex/Mask-Propagation) to prepa
 ├── requirements.txt
 ```
 
+**If you encounter the problem of prediction score is 0 in the pre-training stage, please change the ReLU activation function of FC layer in QAM to sigmoid, which will solve the above problem. The corresponding code is on line 174 and 175 of the model/modules.py file.**
+
 ## Training
 ### For pretraining:
 To train on the static image datasets, use the following command:
